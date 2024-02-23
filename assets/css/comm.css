@@ -1,0 +1,569 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+.dm-serif display-regular {
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.dm-serif display-regular-italic {
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.playfair-display {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* reset */
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+textarea,
+p,
+blockquote,
+th,
+td,
+input,
+select,
+button,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+fieldset,
+img {
+  border: 0 none;
+}
+
+dl,
+ul,
+ol,
+menu,
+li {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+input,
+select,
+textarea {
+  font-size: 100%;
+  vertical-align: middle;
+}
+
+button {
+  font-size: 100%;
+  vertical-align: middle;
+  border: 0 none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  -webkit-text-size-adjust: none;
+}
+
+/* 뷰표트 변환시 폰트크기 자동확대 방지 */
+input[type=text], input[type=password], input[type=submit], input[type=search] {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+input:checked[type=checkbox] {
+  background-color: #666;
+  -webkit-appearance: checkbox;
+}
+
+button {
+  -webkit-appearance: button;
+  border-radius: 0;
+}
+
+input[type=button], input[type=submit], input[type=reset], input[type=file] {
+  -webkit-appearance: button;
+  border-radius: 0;
+}
+input[type=search]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+/* 기본 폰트 설정 */
+/* mobile */
+body {
+  background: #ffe349;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: "Pretendard-Regular", serif, "맑은 고딕", sans-serif;
+  color: #222222;
+}
+
+/* desktop */
+@media screen and (min-width: 1280px) {
+  body {
+    font-size: 16px;
+  }
+}
+/* color값은 디자인가이드에 맞게사용 */
+a {
+  color: #222222;
+  text-decoration: none;
+}
+a:active, a:hover {
+  text-decoration: none;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+
+hr {
+  display: none;
+}
+
+input[type=password] {
+  font-family: "Malgun Gothic";
+}
+
+/* 웹폰트 사용시 점이 안보임 - 기본 폰트 사용  */
+/* skipnavigation */
+#u-skip {
+  position: relative;
+  z-index: 3000;
+}
+#u-skip a {
+  position: absolute;
+  top: -35px;
+  left: 0;
+  right: 0;
+  display: inline-block;
+  padding: 7px 10px 5px;
+  background: #333;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  opacity: 0;
+}
+#u-skip a:focus {
+  top: 0;
+  opacity: 1;
+  z-index: 1000;
+}
+
+/* 이미지 스프라이트 */
+.img-g {
+  display: inline-block;
+  overflow: hidden;
+  background: url(../../images/comm/img-comm.png) no-repeat;
+  vertical-align: top;
+}
+
+/* 이미지 */
+/* global */
+.ir-pm {
+  display: block;
+  overflow: hidden;
+  font-size: 0px;
+  line-height: 0;
+  text-indent: -9999px;
+}
+
+/* 사용된 이미지내 의미있는 텍스트의 대체텍스트를 제공할때 */
+.ir-wa {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  z-index: -10;
+  width: 100%;
+  height: 100%;
+}
+
+/* 중요한 이미지 대체텍스트로 이미지off시에도 대체 텍스트를 보여주고자 할때 */
+.blind,
+caption,
+legend {
+  overflow: hidden;
+  position: absolute;
+  width: 0;
+  height: 0;
+  line-height: 0;
+  text-indent: -9999px;
+}
+
+/* 대체텍스트가 아닌 접근성을 위한 숨김텍스트를 제공할때 */
+.f_l {
+  float: left;
+}
+
+.f_r {
+  float: right;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.tbl {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 테이블 초기화 */
+.clearfix {
+  display: block;
+  overflow: visible;
+  width: auto;
+  clear: both;
+  zoom: 1;
+}
+.clearfix:after {
+  display: block;
+  visibility: hidden;
+  height: 0;
+  font-size: 0;
+  clear: both;
+  content: "";
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+#section {
+  width: 100%;
+  height: 100vh;
+}
+
+#pjt-section {
+  width: 100%;
+  height: 100%;
+}
+
+#header {
+  height: 70px;
+}
+
+#main {
+  flex-grow: 1;
+}
+
+#footer {
+  height: 65vh;
+  background-color: #222222;
+}
+
+@media screen and (min-width: 1280px) {
+  .inner {
+    padding: 0;
+  }
+}
+#logo {
+  position: relative;
+  z-index: 1100;
+}
+#logo a {
+  display: flex;
+  align-items: center;
+  height: 70px;
+}
+
+#header .inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 80px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+.wave_wrap {
+  height: 100%;
+}
+
+.wave {
+  min-width: 300vw;
+  min-height: 300vw;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 50vh;
+  left: -107vw;
+}
+
+.back {
+  opacity: 60%;
+  left: -102vw;
+  border-radius: 49%;
+}
+
+.marquee_wrap {
+  position: absolute;
+  top: 40.7%;
+}
+
+.marquee_inner {
+  display: flex;
+  overflow-x: hidden;
+  margin-top: -35px;
+}
+.marquee_inner .box {
+  animation: marquee infinite linear;
+  white-space: nowrap;
+  font-family: "Playfair Display", serif;
+  letter-spacing: -1px;
+  font-size: 70px;
+  padding-left: 24px;
+}
+.marquee_inner .box .sub {
+  color: transparent;
+  -webkit-text-stroke: 0.5px #222222;
+  font-style: italic;
+}
+.marquee_inner .top {
+  animation-duration: 150s;
+  animation-direction: normal;
+}
+.marquee_inner .center {
+  animation-duration: 200s;
+  animation-direction: reverse;
+}
+.marquee_inner .bottom {
+  animation-duration: 250s;
+  animation-direction: normal;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.scroll-wrap {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 5vh;
+}
+
+.scroll {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 300;
+  transform: rotate(90deg);
+  gap: 15px;
+}
+.scroll span {
+  display: block;
+}
+.scroll .bar {
+  width: 120px;
+  height: 1px;
+  background: #fff;
+}
+.scroll .bar-ani {
+  width: 100%;
+  height: 1px;
+  background: #222222;
+  animation-name: updown 3s infinite ease-in-out;
+}
+@keyframes updown {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.contents-wrap {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-items: center;
+  padding: 160px 0;
+  gap: 40px;
+}
+
+.list-wrap {
+  display: flex;
+  gap: 20px;
+  justify-content: space-around;
+}
+
+.pjt-wrap {
+  display: flex;
+  text-align: center;
+  justify-items: center;
+  justify-content: space-between;
+  height: 80vh;
+}
+.pjt-wrap .thumb-wrap {
+  width: 65%;
+}
+.pjt-wrap .thumb {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.pjt-wrap .thumb img {
+  width: 100%;
+}
+.pjt-wrap .thumb img:hover {
+  animation: imgScroll 30s;
+}
+@keyframes imgScroll {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+.pjt-wrap .txt-wrap {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-items: center;
+  justify-content: flex-start;
+  width: 35%;
+  padding: 0 30px;
+}
+.pjt-wrap .txt-wrap h1 {
+  padding-bottom: 20px;
+}
+.pjt-wrap .txt-wrap .txt {
+  flex-grow: 1;
+}
+.pjt-wrap .button-wrap {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 30px;
+}
+.pjt-wrap .button-wrap button {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  background: #fff;
+  font-family: "DM Serif Display", serif;
+  font-weight: 600;
+}
+
+.ft-logo a {
+  color: #ffe349;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-size: 81px;
+}
+.ft-logo a span:nth-child(2) {
+  color: transparent;
+  -webkit-text-stroke: 0.2px #ffe349;
+  font-style: italic;
+}/*# sourceMappingURL=comm.css.map */

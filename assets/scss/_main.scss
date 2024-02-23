@@ -1,0 +1,205 @@
+// .slide-intro {
+//     swiper-slide {
+//         height: 300px;
+//         background-color: $primary;
+//     }
+// }
+h1 {
+  font-family: $font-playfair;
+  font-size: 80px;
+}
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+// cover ------------------------------
+.wave_wrap {
+  height: 100%;
+}
+.wave {
+  min-width: 300vw;
+  min-height: 300vw;
+  background-color: $white;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 50vh;
+  left: -107vw;
+}
+
+.back {
+  opacity: 60%;
+  left: -102vw;
+  border-radius: 49%;
+}
+
+// text marquee
+.marquee_wrap {
+  position: absolute;
+  top: 40.7%;
+}
+.marquee_inner {
+  display: flex;
+  overflow-x: hidden;
+  margin-top: -35px;
+  .box {
+    animation: marquee infinite linear;
+    white-space: nowrap;
+    font-family: $font-playfair;
+    letter-spacing: -1px;
+    // font-weight: 500;
+    font-size: 70px;
+    padding-left: 24px;
+    .sub {
+      color: transparent;
+      -webkit-text-stroke: 0.5px $secondary;
+      font-style: italic;
+    }
+  }
+  .top {
+    animation-duration: 150s;
+    animation-direction: normal;
+  }
+  .center {
+    animation-duration: 200s;
+    animation-direction: reverse;
+  }
+  .bottom {
+    animation-duration: 250s;
+    animation-direction: normal;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+// scroll
+.scroll-wrap {
+  @include posX;
+  bottom: 5vh;
+}
+.scroll {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 300;
+  transform: rotate(90deg);
+  gap: 15px;
+  span {
+    display: block;
+  }
+  .bar {
+    width: 120px;
+    height: 1px;
+    background: $white;
+  }
+  .bar-ani {
+    width: 100%;
+    height: 1px;
+    background: $txtDefult;
+    animation-name: updown 3s infinite ease-in-out;
+  }
+
+  @keyframes updown {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+}
+
+// intro ------------------------------
+.contents-wrap {
+  @include flexCol;
+  padding: 160px 0;
+  gap: 40px;
+}
+
+.list-wrap {
+  display: flex;
+  gap: 20px;
+  justify-content: space-around;
+}
+
+// project sections ------------------------------
+.pjt-wrap {
+  @include flexwrap;
+  justify-content: space-between;
+  height: 80vh;
+  .thumb-wrap {
+    width: 65%;
+  }
+  .thumb {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    img {
+      width: 100%;
+      &:hover {
+        animation: imgScroll 30s;
+      }
+
+      @keyframes imgScroll {
+        0% {
+          transform: translateY(0);
+        }
+        100% {
+          transform: translateY(-100%);
+        }
+      }
+    }
+  }
+  .txt-wrap {
+    @include flexCol;
+    justify-content: flex-start;
+    width: 35%;
+    padding: 0 30px;
+    h1 {
+      padding-bottom: 20px;
+    }
+    .txt {
+      flex-grow: 1;
+    }
+  }
+  .button-wrap {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px;
+    button {
+      width: 100px;
+      height: 100px;
+      border-radius: 100px;
+      background: $white;
+      font-family: $font-playfairDM;
+      font-weight: 600;
+    }
+  }
+}
+
+// footer ------------------------------
+.ft-logo {
+  a {
+    color: $primary;
+    font-family: $font-playfair;
+    font-weight: 400;
+    font-size: 81px;
+    span {
+      &:nth-child(2) {
+        color: transparent;
+        -webkit-text-stroke: 0.2px $primary;
+        font-style: italic;
+      }
+    }
+  }
+}
