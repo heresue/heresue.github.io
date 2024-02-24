@@ -138,6 +138,7 @@ table {
 
 body {
   -webkit-text-size-adjust: none;
+  overflow-x: hidden;
 }
 
 /* 뷰표트 변환시 폰트크기 자동확대 방지 */
@@ -381,6 +382,33 @@ h3 {
   font-size: 24px;
 }
 
+.cir-wrap {
+  position: absolute;
+  top: 280px;
+  right: 150px;
+}
+
+.bounce_cir1 {
+  width: 50px;
+  height: 54px;
+  border-radius: 50px;
+  transform: rotate(45deg);
+  background: #ffe349;
+  opacity: 70%;
+}
+
+.bounce_cir2 {
+  width: 30px;
+  height: 35px;
+  border-radius: 35px;
+  transform: rotate(15deg);
+  background: #ffe349;
+  opacity: 70%;
+  position: relative;
+  top: 9px;
+  right: 21px;
+}
+
 .wave_wrap {
   height: 100%;
 }
@@ -468,11 +496,11 @@ h3 {
   height: 1px;
   background: #fff;
 }
-.scroll .bar-ani {
+.scroll .bar .bar-ani {
   width: 100%;
   height: 1px;
   background: #222222;
-  animation-name: updown 3s infinite ease-in-out;
+  animation: updown 2s infinite ease-in-out;
 }
 @keyframes updown {
   0% {
@@ -489,13 +517,16 @@ h3 {
   text-align: center;
   justify-items: center;
   padding: 160px 0;
-  gap: 40px;
 }
 
 .list-wrap {
   display: flex;
+  padding-top: 110px;
   gap: 20px;
   justify-content: space-around;
+}
+.list-wrap h3 {
+  padding-bottom: 20px;
 }
 
 .pjt-wrap {
@@ -556,14 +587,26 @@ h3 {
   font-weight: 600;
 }
 
+.ft-logo {
+  position: relative;
+  top: -177px;
+  left: -8px;
+}
 .ft-logo a {
   color: #ffe349;
   font-family: "Playfair Display", serif;
   font-weight: 400;
-  font-size: 81px;
+  font-size: 150px;
+  letter-spacing: -5px;
+  white-space: nowrap;
 }
 .ft-logo a span:nth-child(2) {
   color: transparent;
   -webkit-text-stroke: 0.2px #ffe349;
   font-style: italic;
+}
+
+.copy {
+  color: #fff;
+  opacity: 70%;
 }/*# sourceMappingURL=comm.css.map */

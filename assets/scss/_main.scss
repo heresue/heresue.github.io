@@ -16,6 +16,36 @@ h3 {
   font-size: 24px;
 }
 
+// bounce circle
+.cir-wrap {
+  position: absolute;
+  top: 280px;
+  right: 150px;
+}
+
+.bounce_cir1 {
+  width: 50px;
+  height: 54px;
+  border-radius: 50px;
+  transform: rotate(45deg);
+  background: $primary;
+  opacity: 70%;
+  // position: relative;
+  // top: 300px;
+  // right: 100px;
+}
+.bounce_cir2 {
+  width: 30px;
+  height: 35px;
+  border-radius: 35px;
+  transform: rotate(15deg);
+  background: $primary;
+  opacity: 70%;
+  position: relative;
+  top: 9px;
+  right: 21px;
+}
+
 // cover ------------------------------
 .wave_wrap {
   height: 100%;
@@ -101,12 +131,12 @@ h3 {
     width: 120px;
     height: 1px;
     background: $white;
-  }
-  .bar-ani {
-    width: 100%;
-    height: 1px;
-    background: $txtDefult;
-    animation-name: updown 3s infinite ease-in-out;
+    .bar-ani {
+      width: 100%;
+      height: 1px;
+      background: $txtDefult;
+      animation: updown 2s infinite ease-in-out;
+    }
   }
 
   @keyframes updown {
@@ -123,13 +153,16 @@ h3 {
 .contents-wrap {
   @include flexCol;
   padding: 160px 0;
-  gap: 40px;
 }
 
 .list-wrap {
   display: flex;
+  padding-top: 110px;
   gap: 20px;
   justify-content: space-around;
+  h3 {
+    padding-bottom: 20px;
+  }
 }
 
 // project sections ------------------------------
@@ -189,11 +222,17 @@ h3 {
 
 // footer ------------------------------
 .ft-logo {
+  position: relative;
+  top: -177px;
+  left: -8px;
+
   a {
     color: $primary;
     font-family: $font-playfair;
     font-weight: 400;
-    font-size: 81px;
+    font-size: 150px;
+    letter-spacing: -5px;
+    white-space: nowrap;
     span {
       &:nth-child(2) {
         color: transparent;
@@ -202,4 +241,9 @@ h3 {
       }
     }
   }
+}
+
+.copy {
+  color: $white;
+  opacity: 70%;
 }
