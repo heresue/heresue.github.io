@@ -7,6 +7,9 @@
 // list style
 
 // layout
+#body > .wrap {
+  overflow-x: hidden;
+}
 .wrap {
   display: flex;
   flex-direction: column;
