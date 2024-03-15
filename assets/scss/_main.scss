@@ -161,28 +161,39 @@ h3 {
   gap: 20px;
   justify-content: space-around;
   h3 {
+    font-size: 32px;
     padding-bottom: 20px;
   }
 }
 
 // project sections ------------------------------
-.pjt-wrap {
+#pjt-section {
+  .inner {
+    display: flex;
+    flex-direction: column;
+    gap: 300px;
+    padding: 0;
+  }
+}
+.project-wrap {
   @include flexwrap;
   justify-content: space-between;
   height: 80vh;
+  box-shadow: 4px 12px 30px 6px rgba(0, 0, 0, 0.09);
   .thumb-wrap {
     width: 65%;
+    padding: 30px;
   }
   .thumb {
     height: 100%;
     position: relative;
     overflow: hidden;
+    // border: 1px solid $secondary;
     img {
       width: 100%;
       &:hover {
         animation: imgScroll 30s;
       }
-
       @keyframes imgScroll {
         0% {
           transform: translateY(0);
@@ -197,30 +208,76 @@ h3 {
     @include flexCol;
     justify-content: flex-start;
     width: 35%;
-    padding: 0 30px;
+    padding: 30px;
     h1 {
-      padding-bottom: 20px;
+      // font-family: "pretendard";
+      font-size: 48px;
+      font-weight: 700;
+      margin-bottom: 50px;
     }
     .txt {
       flex-grow: 1;
+    }
+  }
+  li {
+    display: flex;
+  }
+  span {
+    text-align: left;
+    margin-bottom: 30px;
+    &:nth-child(1) {
+      width: 100px;
+    }
+  }
+  .desc {
+    display: flex;
+    flex-direction: column;
+    span {
+      margin-bottom: 5px;
     }
   }
   .button-wrap {
     display: flex;
     justify-content: space-between;
     padding: 20px 30px;
-    button {
-      width: 100px;
-      height: 100px;
-      border-radius: 100px;
-      background: $white;
-      font-family: $font-playfairDM;
-      font-weight: 600;
+  }
+  #gotoBtn {
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    background: $white;
+    font-family: $font-playfairDM;
+    font-weight: 600;
+    position: relative;
+    // overflow: hidden;
+    --a: initial;
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: var(--top);
+      left: var(--left);
+      width: 200px;
+      height: 200px;
+      transform: scale(0);
+      // pointer-events: none;
+      animation: var(--a);
+      background-color: $secondary;
+      border-radius: 300px;
+    }
+    @keyframes ripple-effect {
+      100% {
+        transform: scale(1);
+        opacity: 0;
+      }
     }
   }
 }
 
 // footer ------------------------------
+#footer {
+  position: relative;
+}
 .ft-logo {
   position: relative;
   top: -177px;
@@ -246,4 +303,6 @@ h3 {
 .copy {
   color: $white;
   opacity: 70%;
+  position: absolute;
+  bottom: 10px;
 }

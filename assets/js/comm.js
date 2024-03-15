@@ -1,9 +1,3 @@
-// new Swiper(".swiper-container", {
-//   direction: "vertical", // 수직 슬라이드
-//   autoplay: true, // 자동 재생 여부
-//   loop: true, // 반복 재생 여부
-// });
-
 // wave, bounce effect
 function random(min, max) {
   // `.toFixed()`를 통해 반환된 문자 데이터를,
@@ -24,10 +18,6 @@ function floatingObject(selector, delay, size) {
 }
 floatingObject(".wave_wrap", 0, 40);
 floatingObject(".cir-wrap", 0, 60);
-// floatingObject(".bounce_cir1", 0, 30);
-// floatingObject(".bounce_cir2", 0, 30);
-// floatingObject(".floating2", 0.5, 15);
-// floatingObject(".floating3", 1.5, 20);
 
 function bouncingBall(selector, delay) {
   gsap.to(selector, random(2.5, 4.5), {
@@ -38,10 +28,10 @@ function bouncingBall(selector, delay) {
     delay: random(0, delay),
   });
 }
+
 // bouncingBall(".cir-wrap", 0);
 bouncingBall(".bounce_cir1", 0);
 bouncingBall(".bounce_cir2", 0);
-
 
 // footer title
 gsap.registerPlugin(ScrollTrigger);
@@ -50,9 +40,9 @@ gsap.to(".ft-logo", {
     trigger: ".ft-logo", // 모션이 어느 지점에서 시작되는지
     // markers: true,
     start: "top 50%", // 모션이 시작되는 지점 (trigger의 상대 위치 / 뷰포트의 절대 위치)
-    end: "bottom 20%", // 모션이 끝나는 지점
+    end: "bottom 23%", // 모션이 끝나는 지점
     scrub: true, // 스크롤의 양방향으로 모션을 재생 (스크롤 다운하다가 업 하면 원래대로 돌아감)
   },
   y: 123.3,
-  duration: 1,
+  duration: 0.7,
 });

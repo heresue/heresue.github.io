@@ -347,11 +347,6 @@ legend {
   background-color: #222222;
 }
 
-@media screen and (min-width: 1280px) {
-  .inner {
-    padding: 0;
-  }
-}
 #logo {
   position: relative;
   z-index: 1100;
@@ -526,28 +521,38 @@ h3 {
   justify-content: space-around;
 }
 .list-wrap h3 {
+  font-size: 32px;
   padding-bottom: 20px;
 }
 
-.pjt-wrap {
+#pjt-section .inner {
+  display: flex;
+  flex-direction: column;
+  gap: 300px;
+  padding: 0;
+}
+
+.project-wrap {
   display: flex;
   text-align: center;
   justify-items: center;
   justify-content: space-between;
   height: 80vh;
+  box-shadow: 4px 12px 30px 6px rgba(0, 0, 0, 0.09);
 }
-.pjt-wrap .thumb-wrap {
+.project-wrap .thumb-wrap {
   width: 65%;
+  padding: 30px;
 }
-.pjt-wrap .thumb {
+.project-wrap .thumb {
   height: 100%;
   position: relative;
   overflow: hidden;
 }
-.pjt-wrap .thumb img {
+.project-wrap .thumb img {
   width: 100%;
 }
-.pjt-wrap .thumb img:hover {
+.project-wrap .thumb img:hover {
   animation: imgScroll 30s;
 }
 @keyframes imgScroll {
@@ -558,33 +563,77 @@ h3 {
     transform: translateY(-100%);
   }
 }
-.pjt-wrap .txt-wrap {
+.project-wrap .txt-wrap {
   display: flex;
   flex-direction: column;
   text-align: center;
   justify-items: center;
   justify-content: flex-start;
   width: 35%;
-  padding: 0 30px;
+  padding: 30px;
 }
-.pjt-wrap .txt-wrap h1 {
-  padding-bottom: 20px;
+.project-wrap .txt-wrap h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 50px;
 }
-.pjt-wrap .txt-wrap .txt {
+.project-wrap .txt-wrap .txt {
   flex-grow: 1;
 }
-.pjt-wrap .button-wrap {
+.project-wrap li {
+  display: flex;
+}
+.project-wrap span {
+  text-align: left;
+  margin-bottom: 30px;
+}
+.project-wrap span:nth-child(1) {
+  width: 100px;
+}
+.project-wrap .desc {
+  display: flex;
+  flex-direction: column;
+}
+.project-wrap .desc span {
+  margin-bottom: 5px;
+}
+.project-wrap .button-wrap {
   display: flex;
   justify-content: space-between;
   padding: 20px 30px;
 }
-.pjt-wrap .button-wrap button {
+.project-wrap #gotoBtn {
   width: 100px;
   height: 100px;
   border-radius: 100px;
   background: #fff;
   font-family: "DM Serif Display", serif;
   font-weight: 600;
+  position: relative;
+  --a: initial;
+}
+.project-wrap #gotoBtn:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: var(--top);
+  left: var(--left);
+  width: 200px;
+  height: 200px;
+  transform: scale(0);
+  animation: var(--a);
+  background-color: #222222;
+  border-radius: 300px;
+}
+@keyframes ripple-effect {
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+#footer {
+  position: relative;
 }
 
 .ft-logo {
@@ -609,4 +658,6 @@ h3 {
 .copy {
   color: #fff;
   opacity: 70%;
+  position: absolute;
+  bottom: 10px;
 }/*# sourceMappingURL=comm.css.map */
