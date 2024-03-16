@@ -16,13 +16,31 @@ h3 {
   font-size: 24px;
 }
 
+// cover ------------------------------
+.wave_wrap {
+  height: 100%;
+}
+.wave {
+  min-width: 300vw;
+  min-height: 300vw;
+  background-color: $white;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 50vh;
+  left: -107vw;
+}
+.back {
+  opacity: 60%;
+  left: -102vw;
+  border-radius: 49%;
+}
+
 // bounce circle
 .cir-wrap {
   position: absolute;
-  top: 280px;
+  top: 220px;
   right: 150px;
 }
-
 .bounce_cir1 {
   width: 50px;
   height: 54px;
@@ -44,26 +62,6 @@ h3 {
   position: relative;
   top: 9px;
   right: 21px;
-}
-
-// cover ------------------------------
-.wave_wrap {
-  height: 100%;
-}
-.wave {
-  min-width: 300vw;
-  min-height: 300vw;
-  background-color: $white;
-  border-radius: 50%;
-  position: absolute;
-  bottom: 50vh;
-  left: -107vw;
-}
-
-.back {
-  opacity: 60%;
-  left: -102vw;
-  border-radius: 49%;
 }
 
 // text marquee
@@ -180,6 +178,11 @@ h3 {
   justify-content: space-between;
   height: 80vh;
   box-shadow: 4px 12px 30px 6px rgba(0, 0, 0, 0.09);
+  transition: all 0.3s;
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 4px 12px 30px 6px rgba(0, 0, 0, 0.3);
+  }
   .thumb-wrap {
     width: 65%;
     padding: 30px;
@@ -264,12 +267,6 @@ h3 {
       animation: var(--a);
       background-color: $secondary;
       border-radius: 300px;
-    }
-    @keyframes ripple-effect {
-      100% {
-        transform: scale(1);
-        opacity: 0;
-      }
     }
   }
 }

@@ -6,6 +6,11 @@
 
 // list style
 
+::selection {
+  background-color: #4bc9c7;
+  color: $txtDefult;
+}
+
 // layout
 #body > .wrap {
   overflow-x: hidden;
@@ -17,7 +22,7 @@
 }
 .inner {
   max-width: 1280px;
-  margin: 0 auto;  
+  margin: 0 auto;
   padding: 0 20px;
 }
 #section {
@@ -25,8 +30,8 @@
   height: 100vh;
 }
 #pjt-section {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 #header {

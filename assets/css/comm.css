@@ -312,6 +312,16 @@ legend {
   content: "";
 }
 
+::-moz-selection {
+  background-color: #4bc9c7;
+  color: #222222;
+}
+
+::selection {
+  background-color: #4bc9c7;
+  color: #222222;
+}
+
 #body > .wrap {
   overflow-x: hidden;
 }
@@ -381,9 +391,29 @@ h3 {
   font-size: 24px;
 }
 
+.wave_wrap {
+  height: 100%;
+}
+
+.wave {
+  min-width: 300vw;
+  min-height: 300vw;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 50vh;
+  left: -107vw;
+}
+
+.back {
+  opacity: 60%;
+  left: -102vw;
+  border-radius: 49%;
+}
+
 .cir-wrap {
   position: absolute;
-  top: 280px;
+  top: 220px;
   right: 150px;
 }
 
@@ -406,26 +436,6 @@ h3 {
   position: relative;
   top: 9px;
   right: 21px;
-}
-
-.wave_wrap {
-  height: 100%;
-}
-
-.wave {
-  min-width: 300vw;
-  min-height: 300vw;
-  background-color: #fff;
-  border-radius: 50%;
-  position: absolute;
-  bottom: 50vh;
-  left: -107vw;
-}
-
-.back {
-  opacity: 60%;
-  left: -102vw;
-  border-radius: 49%;
 }
 
 .marquee_wrap {
@@ -543,6 +553,11 @@ h3 {
   justify-content: space-between;
   height: 80vh;
   box-shadow: 4px 12px 30px 6px rgba(0, 0, 0, 0.09);
+  transition: all 0.3s;
+}
+.project-wrap:hover {
+  transform: translateY(-5px);
+  box-shadow: 4px 12px 30px 6px rgba(0, 0, 0, 0.3);
 }
 .project-wrap .thumb-wrap {
   width: 65%;
@@ -628,12 +643,6 @@ h3 {
   animation: var(--a);
   background-color: #222222;
   border-radius: 300px;
-}
-@keyframes ripple-effect {
-  100% {
-    transform: scale(1);
-    opacity: 0;
-  }
 }
 
 #footer {
